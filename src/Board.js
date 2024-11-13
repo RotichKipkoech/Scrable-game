@@ -1,24 +1,43 @@
-// src/Board.js
 import React from 'react';
-import Tile from './Tile';
+import { SPECIAL_TILES } from './utils'; // Import special tiles
 
-const Board = ({ board, currentPlayer, handleTileClick }) => {
+const Board = ({ tiles, handleTileClick }) => {
+  const boardSize = 15; // Standard Scrabble board size (15x15)
+
+  const renderBoard = () => {
+    const board = [];
+
+    for (let row = 0; row < boardSize; row++) {
+      const cells = [];
+      for (let col = 0; col < boardSize; col++) {
+        const isSpecialTile = SPECIAL_TILES.find(
+          (tile) => tile.row === row && tile.col === col
+        );
+
+        cells.push(
+          <td
+            key={`${row}-${col}`}
+            className={`cell ${isSpecialTile ? isSpecialTile.type : ''}`}
+            onClick={() => handleTileClick(row, col)}
+          >
+            {tiles[row][col] || (isSpecialTile ? isSpecialTile.type : '')}
+          </td>
+        );
+      }
+      board.push(
+        <tr key={row}>
+          {cells}
+        </tr>
+      );
+    }
+
+    return board;
+  };
+
   return (
-    <div className="board">
-      {board.map((row, rowIndex) => (
-        <div key={rowIndex} className="row">
-          {row.map((tile, colIndex) => (
-            <Tile
-              key={colIndex}
-              row={rowIndex}
-              col={colIndex}
-              letter={tile}
-              onTileClick={handleTileClick}
-            />
-          ))}
-        </div>
-      ))}
-    </div>
+    <table className="board">
+      <tbody>{renderBoard()}</tbody>
+    </table>
   );
 };
 
