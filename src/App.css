@@ -1,6 +1,6 @@
 /* src/styles.css */
 
-.board {
+/* .board {
   margin: 0 auto;
   border-collapse: collapse;
   margin-top: 20px;
@@ -35,4 +35,158 @@
 
 .TripleLetter {
   background-color: #d2e9f8;
+} */
+
+
+/* .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
 }
+
+.board {
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  position: relative;
+  background-color: #fff;
+}
+
+.cell span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.cell span.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.double-letter { background-color: #add8e6; }
+.triple-letter { background-color: #87ceeb; }
+.double-word { background-color: #ffb6c1; }
+.triple-word { background-color: #ff69b4; }
+
+
+.tile-rack {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.tile {
+  width: 40px;
+  height: 40px;
+  background-color: #ffeb3b;
+  border: 2px solid #333;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 4px;
+} */
+
+
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+.game-controls {
+  margin: 20px;
+}
+
+.start-game-button {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text color */
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-game-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.end-button {
+  background-color: #f44336;
+}
+
+.tile-rack {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  border: 1px solid #ddd;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(15, 40px);
+  grid-template-rows: repeat(15, 40px);
+  gap: 2px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.DW {
+  background-color: #f8b400;
+}
+
+.TW {
+  background-color: #e63946;
+}
+
+.DL {
+  background-color: #74c69d;
+}
+
+.TL {
+  background-color: #3a86ff;
+}
+
+.game-over {
+  font-size: 24px;
+  color: red;
+  margin-top: 20px;
+}
+
+

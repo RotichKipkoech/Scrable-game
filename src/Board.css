@@ -1,0 +1,91 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr); /* 15 equal columns */
+    grid-template-rows: repeat(15, 1fr);    /* 15 equal rows */
+    gap: 2px; /* Small gap between tiles */
+    justify-items: center;
+    align-items: center;
+    width: 80vw; /* Use viewport width to control size */
+    height: 80vw; /* Use the same to keep the board square */
+    max-width: 900px; /* Max width to ensure the board doesn't stretch too far */
+    max-height: 900px; /* Max height to match width */
+    margin: 20px auto; /* Center the board horizontally */
+    border: 3px solid #333; /* Border to define the board */
+    position: relative;
+  }
+  
+  .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%; /* Ensures tile takes full width */
+    height: 100%; /* Ensures tile takes full height */
+    box-sizing: border-box; /* Includes padding and borders in size calculation */
+    position: relative;
+  }
+  
+  .premium-label {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .TW {
+    background-color: #e63946;
+  }
+  
+  .DW {
+    background-color: #f8b400;
+  }
+  
+  .DL {
+    background-color: #74c69d;
+  }
+  
+  .TL {
+    background-color: #3a86ff;
+  }
+  
+  .rack {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .rack-tile {
+    width: 40px;
+    height: 40px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .game-controls {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .start-button, .end-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .game-over {
+    font-size: 24px;
+    color: red;
+    margin-top: 20px;
+  }
+  
