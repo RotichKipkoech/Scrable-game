@@ -8,6 +8,7 @@ function App() {
   const [selectedTile, setSelectedTile] = useState(null); // Tile selected from the rack
   const [gameOver, setGameOver] = useState(false); // Game status: whether the game is over
 
+// Handle select
   const handleTileSelect = (tile) => {
     if (gameOver) return; // Prevent selecting tiles if the game is over
     setSelectedTile(tile); // Set the selected tile from the rack
@@ -20,7 +21,7 @@ function App() {
     setRack(prevRack => prevRack.filter(tile => tile !== selectedTile)); // Remove tile from rack
     setSelectedTile(null); // Reset selected tile
   };
-
+// Game Over
   const endGame = () => {
     setGameOver(true);
     // Logic for calculating final scores can go here
